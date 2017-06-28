@@ -1,0 +1,22 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li>详情</li>
+</ul>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h1>{{dish.name}}</h1>
+        <img ng-src="img/{{dish.img_lg}}" class="img-responsive"/>
+        <p>{{dish.material}}</p>
+        <p>{{dish.detail}}</p>
+        <hr/>
+        <p style="color:#A12839">{{dish.price | currency:'￥'}}</p>
+    </div>
+    <div class="panel-footer">
+        <div class="text-right">
+            <button class="btn btn-success" ng-click="jump('/kflOrder/'+dish.did)">我要订餐</button>
+            <button class="btn btn-warning" ng-click="jump('/kflMain')">我再看看</button>
+        </div>
+    </div>
+</div>
